@@ -411,6 +411,10 @@
 
     if (key === 'r' || key === 'R') { reset(); return; }
     if (key === 'p' || key === 'P') { e.preventDefault(); togglePause(); return; }
+    if (key === ' ') {
+      e.preventDefault();
+      if (paused) { togglePause(); return; }
+    }
     if (paused || gameOver) return;
 
     switch (key) {
